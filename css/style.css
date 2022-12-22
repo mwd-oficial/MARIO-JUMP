@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+#virar {
+    display: none;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgb(35, 160, 35), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0), rgb(110, 50, 0));
+}
+
+.game-board {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#game-over {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none
+}
+
+#game-over p {
+    font-size: 5em;
+    margin-bottom: 50px;
+    color: white;
+}
+
+#rec {
+    background-color: white;
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#rec:hover {
+    background-color: lightgray;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 20s infinite linear;
+    right: -500px;
+}
+
+#sclouds {
+    animation-delay: 10s;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 100%;
+    }
+}

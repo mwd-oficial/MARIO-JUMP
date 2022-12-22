@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Jump</title>
+    <link rel="stylesheet" href="css/style.css" media="screen and (orientation:landscape)">
+    <link rel="stylesheet" href="css/virar.css" media="screen and (orientation:portrait)">
+</head>
+<body>
+
+    <div class="game-board">
+
+        <img src="imagens/clouds.png" class="clouds">
+        <img src="imagens/clouds.png" class="clouds" id="sclouds">
+        <img src="imagens/mario.gif" alt="" class="mario">
+        <img src="imagens/pipe.png" class="pipe">
+
+    </div>
+
+    <div id="game-over">
+        <p>game-over</p>
+        <input type="button" value="Recomeçar" id="rec" onClick="window.location.reload()">
+    </div>
+
+    <div id="virar">
+        <p>Vire o seu celular</p>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
